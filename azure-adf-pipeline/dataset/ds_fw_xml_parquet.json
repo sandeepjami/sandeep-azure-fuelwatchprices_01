@@ -1,0 +1,17 @@
+{
+	"name": "ds_fw_xml_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_HttpServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Xml",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

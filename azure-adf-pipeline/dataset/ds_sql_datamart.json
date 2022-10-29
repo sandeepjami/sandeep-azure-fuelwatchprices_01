@@ -1,0 +1,68 @@
+{
+	"name": "ds_sql_datamart",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "description",
+				"type": "nvarchar"
+			},
+			{
+				"name": "brand",
+				"type": "nvarchar"
+			},
+			{
+				"name": "date",
+				"type": "date"
+			},
+			{
+				"name": "price",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "tradingname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "location",
+				"type": "nvarchar"
+			},
+			{
+				"name": "address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "phone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "latitude",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "longitude",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "sitefeatures",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "tempstage",
+			"table": "FuelPrices"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
