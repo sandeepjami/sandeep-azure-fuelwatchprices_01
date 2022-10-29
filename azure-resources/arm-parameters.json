@@ -34,10 +34,10 @@
         "value": "tp-ky-dev-1004"
       },
       "enabledForDeployment": {
-        "value": null
+        "value": false
       },
       "enabledForDiskEncryption": {
-        "value": null
+        "value": false
       },
       "enabledForTemplateDeployment": {
         "value": true
