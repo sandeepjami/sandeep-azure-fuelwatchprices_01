@@ -1,6 +1,5 @@
 {
 	"name": "LS_AzureDataLakeStorage",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobFS",
@@ -12,8 +11,9 @@
 					"referenceName": "LS_KeyVault",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "accesskeyadl"
+				"secretName": "StorageAccountKey"
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
