@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "tags": {
+        "value": {
+          "Department": "Finance",
+          "Environment": "Development"
+        }
+      },
+      "location": {
+        "value": "australiaeast"
+      },
+      "storageAccountName": {
+        "value": "tpadlstgdev1004"
+      },
+      "containerName": {
+        "value": "tpdev"
+      },
+      "serverName": {
+        "value": "tp-sql-dev-1004"
+      },
+      "sqlDBName": {
+        "value": "DataMart"
+      },
+      "administratorLogin": {
+        "value": "tp-admin"
+      },
+      "administratorLoginPassword": {
+        "value": "tp@12345"
+      },
+      "factoryName": {
+        "value": "tp-adf-dev-1004"
+      },
+      "dataFactory_identity_type": {
+        "value": "SystemAssigned"
+      },
+      "keyVaultName": {
+        "value": "tp-ky-dev-1004"
+      },
+      "enabledForDeployment": {
+        "value": null
+      },
+      "enabledForDiskEncryption": {
+        "value": null
+      },
+      "enabledForTemplateDeployment": {
+        "value": true
+      },
+      "skuName": {
+        "value": "standard"
+      }
+    }
+  }
