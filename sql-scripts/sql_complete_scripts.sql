@@ -3,7 +3,7 @@ GO
 
 
 ---------------------------------Scripts for Creating Contained Users for Database--------------
-CREATE USER tpuser
+CREATE USER tp-user
 WITH PASSWORD='xxxxx'
 GO
 EXEC sp_addrolemember N'db_owner', N'tpuser'
@@ -33,6 +33,7 @@ CREATE TABLE [dw].[Dim_Brand](
 )WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+--Check
 /****** Object:  Table [dw].[Dim_Site]    Script Date: 30/08/2022 8:16:22 PM ******/
 SET ANSI_NULLS ON
 GO
