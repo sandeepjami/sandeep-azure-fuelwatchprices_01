@@ -78,7 +78,7 @@
       }
     },
     "enabledForTemplateDeployment": {
-      "defaultValue": false,
+      "defaultValue": true,
       "type": "Bool",
       "metadata": {
         "description": "Specifies whether Azure Resource Manager is permitted to retrieve secrets from the key vault."
