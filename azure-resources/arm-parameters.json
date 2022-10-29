@@ -21,6 +21,12 @@
       "administratorLogin": {
         "value": ""
       },
+      "userLoginPassword": {
+        "value": ""
+      },
+      "userLoginUsername": {
+        "value": ""
+      },
       "administratorLoginPassword": {
         "value": ""
       },

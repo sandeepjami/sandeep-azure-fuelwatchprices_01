@@ -48,6 +48,18 @@
         "description": "The administrator password of the SQL logical server."
       }
     },
+     "userLoginUsername": {
+      "type": "String",
+      "metadata": {
+        "description": "The administrator username of the SQL logical server."
+      }
+    },
+    "userLoginPassword": {
+      "type": "SecureString",
+      "metadata": {
+        "description": "The administrator password of the SQL logical server."
+      }
+    },
     "factoryName": {
             "type": "string",
             "metadata": "Specifies the name of the Data Factory name"
@@ -289,7 +301,7 @@
           "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
         ],
         "properties": {
-          "value": "[concat('Server=tcp:',reference(parameters('serverName')).fullyQualifiedDomainName,',1433;Initial Catalog=',parameters('sqlDBName'),';Persist Security Info=False;User ID=',reference(parameters('serverName')).administratorLogin,';Password=',parameters('administratorLoginPassword'),';MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;')]"
+          "value": "[concat('Server=tcp:',reference(parameters('serverName')).fullyQualifiedDomainName,',1433;Initial Catalog=',parameters('sqlDBName'),';Persist Security Info=False;User ID=',parameters('userLoginUsername'),';Password=',parameters('userLoginPassword'),';MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;')]"
         }
       }
   ]
