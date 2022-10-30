@@ -306,7 +306,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "fuelWatch-to-parquet",
+						"name": "fuelWatch-to-parquet-01",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -453,11 +453,11 @@
 						]
 					},
 					{
-						"name": "parquet-SQL",
+						"name": "parquet-SQL-01",
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "fuelWatch-to-parquet",
+								"activity": "fuelWatch-to-parquet-01",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -641,11 +641,11 @@
 						]
 					},
 					{
-						"name": "STP-LoadBrand",
+						"name": "STP-LoadBrand-01",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "parquet-SQL",
+								"activity": "parquet-SQL-01",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -668,11 +668,11 @@
 						}
 					},
 					{
-						"name": "STP-LoadSite",
+						"name": "STP-LoadSite-01",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "STP-LoadBrand",
+								"activity": "STP-LoadBrand-01",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -695,11 +695,11 @@
 						}
 					},
 					{
-						"name": "STP-SiteFeatures",
+						"name": "STP-SiteFeatures-01",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "STP-LoadSite",
+								"activity": "STP-LoadSite-01",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -726,7 +726,7 @@
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "STP-SiteFeatures",
+								"activity": "STP-SiteFeatures-01",
 								"dependencyConditions": [
 									"Succeeded"
 								]
