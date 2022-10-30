@@ -415,7 +415,7 @@
 				}
 			},
 			{
-				"name": "STP-LoadFactPrices-01",
+				"name": "STP-LoadFactPrices",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
