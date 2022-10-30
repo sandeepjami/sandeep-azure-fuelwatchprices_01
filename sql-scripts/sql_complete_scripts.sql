@@ -4,7 +4,7 @@ GO
 
 ---------------------------------Scripts for Creating Contained Users for Database--------------
 CREATE USER tpuser
-WITH PASSWORD='xxxxx'
+WITH PASSWORD='xxxxxxxx'
 GO
 EXEC sp_addrolemember N'db_owner', N'tpuser'
 GO
