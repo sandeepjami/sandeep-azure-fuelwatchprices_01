@@ -1,0 +1,9 @@
+{
+	"name": "tp-adf-dev-200",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "97202100-bac9-4048-be1d-1770155dec78",
+		"tenantId": "fcffa9b5-7964-4588-8f54-537803cf9bf9"
+	}
+}
