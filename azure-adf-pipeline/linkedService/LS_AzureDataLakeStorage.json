@@ -1,11 +1,10 @@
 {
 	"name": "LS_AzureDataLakeStorage",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "$(lsDatalakeAdf)",
+			"url": "https://tpadlsdev200.dfs.core.windows.net/",
 			"accountKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
@@ -15,5 +14,6 @@
 				"secretName": "StorageAccountKey"
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
