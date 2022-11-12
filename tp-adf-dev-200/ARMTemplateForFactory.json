@@ -35,7 +35,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "fuelWatch-to-parquet-01",
+						"name": "fuelWatch-to-parquet-02",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -182,11 +182,11 @@
 						]
 					},
 					{
-						"name": "parquet-SQL-01",
+						"name": "parquet-SQL-02",
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "fuelWatch-to-parquet-01",
+								"activity": "fuelWatch-to-parquet-02",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -370,11 +370,11 @@
 						]
 					},
 					{
-						"name": "STP-LoadBrand-01",
+						"name": "STP-LoadBrand-02",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "parquet-SQL-01",
+								"activity": "parquet-SQL-02",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -397,11 +397,11 @@
 						}
 					},
 					{
-						"name": "STP-LoadSite-01",
+						"name": "STP-LoadSite-02",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "STP-LoadBrand-01",
+								"activity": "STP-LoadBrand-02",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -424,11 +424,11 @@
 						}
 					},
 					{
-						"name": "STP-SiteFeatures-01",
+						"name": "STP-SiteFeatures-02",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "STP-LoadSite-01",
+								"activity": "STP-LoadSite-02",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -451,11 +451,11 @@
 						}
 					},
 					{
-						"name": "STP-LoadFactPrices",
+						"name": "STP-LoadFactPrices-02",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "STP-SiteFeatures-01",
+								"activity": "STP-SiteFeatures-02",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -483,7 +483,7 @@
 					"cancelAfter": {}
 				},
 				"annotations": [],
-				"lastPublishTime": "2022-10-29T09:37:06Z"
+				"lastPublishTime": "2022-11-12T06:14:55Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_fw_xml_parquet')]",
