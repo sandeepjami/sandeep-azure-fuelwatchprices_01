@@ -11,7 +11,7 @@
 					"referenceName": "LS_KeyVault",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "SqlConnectionString"
+				"secretName": "$(lsSQLconnectionAdf)"
 			}
 		}
 	}

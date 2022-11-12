@@ -5,7 +5,7 @@
 		"annotations": [],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "https://tp-ky-dev-200.vault.azure.net/"
+			"baseUrl": "$(lsKeyVaultAdf)"
 		}
 	}
 }
